@@ -1,0 +1,34 @@
+Nazwa bazy danych:
+esdb (elkostatki database)
+
+sudo apt-get install postgresql g++ python-dev python-pip scons lighttpd nodejs nodejs-legacy npm git
+
+sudo -u postgres createuser --no-superuser --createdb --no-createrole esdb
+
+sudo -u postgres createdb -O esdb esdb
+
+sudo -u postgres psql -c "alter user esdb with encrypted password 'elka';"
+
+Sprawdź połączenie:
+psql esdb -U esdb
+Jesli nie działa, zamień w pliku:
+/etc/postgresql/9.1/main/pg_hba.conf
+local all all peer -> local all all md5
+Zresetuj:
+sudo /etc/init.d/postgresql restart
+
+??? pip install -r pip_dev.requirements ??? Nie chciało działać
+
+sudo npm install -g bower
+
+Ściągnij boosta (boost.org v1.57.0 na ten czas)
+Rozpakuj
+sh bootstrap.sh
+./b2
+sudo cp -R boost /usr/local/include
+sudo cp -R stage/lib/* /usr/local/lib
+Zmaiast ręcznie umieszczać pliki, możliwe, że da się to zrobić paczką.
+
+cd client
+bower install
+
