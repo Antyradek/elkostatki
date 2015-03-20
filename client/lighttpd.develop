@@ -29,7 +29,7 @@ server.modules += ( "mod_fastcgi" )
 #accesslog.format       = "%h %t %r %>s %b time: %T [s]"
 #accesslog.filename       = log_root + "/access.log"
 fastcgi.server = (
-"/srvmyapp" =>
+"/elkostatki" =>
 ((
 "host" => "127.0.0.1",
 "port" => 50007,
