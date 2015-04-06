@@ -1,1 +1,8 @@
-errors/*
+errors
+sessions
+cron
+databases
+languages
+models
+private
+uploads
