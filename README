@@ -1,0 +1,4 @@
+Ściągnij web2py
+Nazwij ten folder "elkostatki" i wsadź do applications
+Uruchom web2py z jego głównego katalogu za pomocą web2py.py
+Wejdź na localhost:8000/elkostatki
