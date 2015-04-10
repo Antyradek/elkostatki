@@ -8,6 +8,10 @@ Koncepcja w wersji wczesna alfa:
 	Player - klasa reprezentująca gracza
 	AI : Player - gracz z zaimplementowanym mózgiem
 	Game - klasa reprezentująca grę (jej model); odpowiada za komunikację ze światem, zna reguły gry, odpowiada za to, co się dzieje z graczami i ich statkami
+	
+	Board - klasa reprezentująca planszę jako macierz pól
+			nie wnosi nowych informacji i wymaga utrzymywania zgodności z flotą, ale cudownie upraszcza algorytmy gdy interesuje nas pole, a nie statek
+	Coord - para unsigned short dla leniwych
 
 ---------------
    konwencje
@@ -28,11 +32,18 @@ PROSZĘ SIĘ TEGO TRZYMAĆ
 ---------------
      TO DO
 ---------------
-WSZYSTKO ;-;
+	!!! ustalić sposób komunikacji modelu z kontrolerem (a co za tym idzie odpowiednie gettery i settery)
+	!! klasy Player, AI, Game
+	!! algorytm losowania
+	- dopracować wstępnie zrobione klasy
+	- ogarnąć śmietnik, utworzyć jakąś ładną strukturę katalogów
 
 ---------------
    changelog
 ---------------
+v0.1
+	- utworzone wstępne pliki nagłówkowe dla klas Ship, Fleet, Board, Coord
+	- utworzone puste, poprawne definicje (się kompiluje się
 
 v0.0
 	- kopy-pasta z master
