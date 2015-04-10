@@ -10,6 +10,22 @@ Koncepcja w wersji wczesna alfa:
 	Game - klasa reprezentująca grę (jej model); odpowiada za komunikację ze światem, zna reguły gry, odpowiada za to, co się dzieje z graczami i ich statkami
 
 ---------------
+   konwencje
+---------------
+numeracja pól planszy:
+
+(0,0)        (n-1,0)
+    ╔═╦═╦═╦═╦═╗
+    ╠═╬═╬═╬═╬═╣
+    ╠═╬═╬═╬═╬═╣
+    ╠═╬═╬═╬═╬═╣
+    ╠═╬═╬═╬═╬═╣
+    ╚═╩═╩═╩═╩═╝
+(0,n-1)       (n-1,n-1)
+
+PROSZĘ SIĘ TEGO TRZYMAĆ
+
+---------------
      TO DO
 ---------------
 WSZYSTKO ;-;
