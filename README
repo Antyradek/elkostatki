@@ -1,4 +1,27 @@
-Ściągnij web2py
-Nazwij ten folder "elkostatki" i wsadź do applications
-Uruchom web2py z jego głównego katalogu za pomocą web2py.py, pamietaj żeby użyć python2.7
-Wejdź na localhost:8000/elkostatki
+========================
+   TU SIĘ ROBI MODELE
+========================
+
+Koncepcja w wersji wczesna alfa:
+	Ship - klasa reprezentująca pojedynczy statek
+	Fleet - klasa reprezentująca wszystkie statki (flotę) jednego gracza
+	Player - klasa reprezentująca gracza
+	AI : Player - gracz z zaimplementowanym mózgiem
+	Game - klasa reprezentująca grę (jej model); odpowiada za komunikację ze światem, zna reguły gry, odpowiada za to, co się dzieje z graczami i ich statkami
+
+---------------
+     TO DO
+---------------
+WSZYSTKO ;-;
+
+---------------
+   changelog
+---------------
+
+v0.0
+	- kopy-pasta z master
+	- readme :^)
+	
+(\_/)
+(O_o)
+(\ /)
