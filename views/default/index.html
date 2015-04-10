@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Elkostatki</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="{{=URL('static','css/main.css')}}"/>
+	</head>
+	<body>
+		<h3>Elkostatki</h3>
+		{{
+		response.write("<div id='field'>", escape=False)
+		for x in txt:
+			if x=="\n":
+				response.write("<br/>", escape=False)
+			elif x=="1":
+				response.write("<div class='ship1'></div>", escape=False)
+			else:
+				response.write("<div class='water'></div>", escape=False)
+			pass
+		pass
+		response.write("</div>", escape=False)
+		}}
+	</body>
+</html>

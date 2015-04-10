@@ -1,0 +1,16 @@
+#field div
+{
+	display: inline-block;
+	width:  50px;
+	height: 50px;
+}
+
+.water
+{
+	background-color: #104E8B;
+}
+
+.ship1
+{
+	background-color: red;
+}
