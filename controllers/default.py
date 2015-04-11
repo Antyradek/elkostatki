@@ -1,11 +1,13 @@
 import subprocess
+ai = local_import("elkostatki_ai", reload = True);
+
 ## Główna otoczka do gry
 def index():
 	return dict()
 
 #ustaw nową grę, wygeneruj i ustaw do sesji
 def new_game():
-	field = subprocess.Popen("applications/elkostatki/modules/generator -g", shell=True, stdout=subprocess.PIPE).stdout.read()
+	field = ai.generate_field();
 	session.game = field
 	return dict(txt=field)
 	

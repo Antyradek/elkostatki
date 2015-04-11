@@ -1,8 +1,17 @@
 Ściągnij web2py i rozpakuj gdziekolwiek. Będziesz miał folder całego silnika. 
+
 Aby uruchomić serwer, wpisz
 $ python2.7 web2py.py
 i podaj jakieś hasło.
+
 Teraz możesz wejść na localhost, na porcie 8000 (domyślnie).
+
 W katalogu applications stwórz nowy katalog, nazwij go elkostatki. Wszystko z githuba włóż tam.
-Skompiluj program w C++ za pomocą make znajdujący się w modules.
+
+Skompiluj program w C++ za pomocą make.
+
 Wejdź na localhost:8000/elkostatki
+
+Jeśli są błędy, wpierw odświerz stronę kilka rady.
+
+Pliki __init__.py są absolutnie bezużyteczne, należy je zostawić puste. Bo Python.
