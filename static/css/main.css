@@ -10,7 +10,23 @@
 	background-color: #104E8B;
 }
 
-.ship1
+.ship
+{
+	background-color: black;
+}
+
+.shoot_water
+{
+	background-color: blue;
+}
+
+.shoot_ship
 {
 	background-color: red;
+}
+
+.unknown
+{
+	background-color: gray;
+	cursor: pointer;
 }

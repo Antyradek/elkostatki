@@ -20,14 +20,13 @@ string generate_field()
 		{
 			if(rand() % 10 == 0)
 			{
-				out += "1";
+				out += "s";
 			}
 			else
 			{
-				out += "*";
+				out += "w";
 			}
 		}
-		out += "\n";
 	}
 	return out;
 }
