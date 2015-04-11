@@ -16,8 +16,14 @@ void Fleet::rollPlacement()
 	/// TO DO
 }
 
-bool Fleet::canPlaceShip(const Ship & ship, const Board & board)
+bool Fleet::placeShip(const Ship & ship, const Board & board)
 {
 	/// TO DO
 	return true;
+}
+
+ShotStatus Fleet::shoot(Coord position)
+{
+	/// TO DO
+	return SHOT_MISS;
 }

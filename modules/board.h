@@ -11,15 +11,15 @@
  * @var SHIP pole zajęte przez statek
  * @var HIT pole zajęte przez trafiony segment statku
  * @var WRECK pole zjęte przez zatopiony statek
- * @var FORBIDDEN pole sasiadujące ze statkiem
+ * @var PROHIBITED pole sasiadujące ze statkiem
  */
 enum SquareType
 {
-	FREE,
-	SHIP,
-	HIT,
-	WRECK,
-	FORBIDDEN
+	SQ_FREE = 'F',
+	SQ_SHIP = 'S',
+	SQ_HIT = 'H',
+	SQ_WRECK = 'W',
+	SQ_PROHIBITED = 'P'
 };
 
 /**

@@ -3,7 +3,6 @@
 
 #include "coord.h"
 
-
 /**
  * @class Ship
  * Reprezentuje statek
@@ -57,9 +56,6 @@ public:
 	 * @returns true jeśli statek nie został zniszczony
 	 */	
 	bool isAfloat();
-	
-	/// TO DO
-	/// odpowiedni getter potrzebny do rysowania mapy
 };
 
 #endif

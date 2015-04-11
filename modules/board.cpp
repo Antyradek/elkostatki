@@ -13,5 +13,5 @@ void Board::setSquare(Coord position, SquareType type)
 SquareType Board::getSquare(Coord position)
 {
 	///TO DO
-	return FREE;
+	return SQ_FREE;
 }

@@ -10,6 +10,18 @@
 #define TWO_MAST_NUMBER 3
 #define ONE_MAST_NUMBER 4
 
+/**
+ * @enum efekt strzału
+ * @var MISS pudło
+ * @var HIT trafienie (bez zatopienia)
+ * @var SUNK trafienie (statek zatopiony)
+ */
+enum ShotStatus
+{
+	SHOT_MISS = 'M',
+	SHOT_HIT = 'H',
+	SHOT_SUNK = 'S'
+};
 
 /**
  * @class Fleet
@@ -19,7 +31,13 @@ class Fleet
 {
 private:
 	/// Tablica statków
-	Ship* ships[SHIPS_NUMBER];
+	Ship ships[];
+	
+	/// Plansza gracza
+	Board myBoard;
+	
+	/// Plansza wroga
+	Board enemyBoard;
 	
 public:
 	/**
@@ -34,14 +52,21 @@ public:
 	bool hasShipsLeft();
 	
 	/**
-	 * Rozstawia statki na planszy
+	 * Rozstawia statki na planszy w sposób losowy
 	 */
 	void rollPlacement();
 	
 	/**
-	 * Sprawdza, czy statek może zostać ustawiony na planszy
+	 * Próbuje ustawić statek na planszy
+	 * @returns true jeśli się udało, false, jeśli to niemożliwe
 	 */
-	bool canPlaceShip(const Ship & ship, const Board & board);
+	bool placeShip(const Ship & ship, const Board & board);
+	
+	/**
+	 * Strzela w dane pole
+	 * @returns efekt strzału
+	 */
+	ShotStatus shoot(Coord position);
 	
 	/// TO DO
 	/// ustalić algorytm losowania pozycji
