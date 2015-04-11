@@ -2,16 +2,29 @@
    TU SIĘ ROBI MODELE
 ========================
 
-Koncepcja w wersji wczesna alfa:
+Koncepcja w wersji alfa:
 	Ship - klasa reprezentująca pojedynczy statek
-	Fleet - klasa reprezentująca wszystkie statki (flotę) jednego gracza
-	Player - klasa reprezentująca gracza
-	AI : Player - gracz z zaimplementowanym mózgiem
+	Fleet - klasa reprezentująca gracza
+	        trzyma jego statki, planszę i aktualnie znaną planszę wroga
+	        przydałoby się to przemianować na Player
+	SkyNet : Fleet - gracz z zaimplementowanym mózgiem
 	Game - klasa reprezentująca grę (jej model); odpowiada za komunikację ze światem, zna reguły gry, odpowiada za to, co się dzieje z graczami i ich statkami
 	
 	Board - klasa reprezentująca planszę jako macierz pól
 			nie wnosi nowych informacji i wymaga utrzymywania zgodności z flotą, ale cudownie upraszcza algorytmy gdy interesuje nas pole, a nie statek
 	Coord - para unsigned short dla leniwych
+	
+---------------------------
+   komunikacja z modelem
+---------------------------
+wszystkie metody przyjmują jako argumenty unsigned short x, unsigned short y, które wyznaczają współrzedną
+wszystkie metody zwracają symboliczny raport w postaci znaku (char)
+raporty odpowiadają wartościom przypisanym odpowiednim typom wyliczeniowym w fleet.h i board.h
+
+Klasa Game pozwala:
+	* strzelić w pole
+	* zapytać o typ pola z planszy gracza
+	* zapytać o typ pola z planszy AI aktualnie znanej przez gracza
 
 ---------------
    konwencje
@@ -32,18 +45,24 @@ PROSZĘ SIĘ TEGO TRZYMAĆ
 ---------------
      TO DO
 ---------------
-	!!! ustalić sposób komunikacji modelu z kontrolerem (a co za tym idzie odpowiednie gettery i settery)
-	!! klasy Player, AI, Game
+	!! dopracować sposób komunikacji modelu z kontrolerem
+	!! dokończyć klasy SkyNet, Game
 	!! algorytm losowania
+	! makefile
 	- dopracować wstępnie zrobione klasy
 	- ogarnąć śmietnik, utworzyć jakąś ładną strukturę katalogów
 
 ---------------
    changelog
 ---------------
+v0.2
+	- wtepny pomysł komunikacji modelu ze światem
+	- drobna zmiana koncepcji i poprawki w klasie Fleet
+	- utworzony bardzo wstępny plik nagłówkowy dla klasy Game i odpowiedni .cpp
+	- utworzone placeholdery plików .h i .cpp klasy SkyNet
 v0.1
 	- utworzone wstępne pliki nagłówkowe dla klas Ship, Fleet, Board, Coord
-	- utworzone puste, poprawne definicje (się kompiluje się
+	- utworzone puste, poprawne definicje (się kompiluje się)
 
 v0.0
 	- kopy-pasta z master
