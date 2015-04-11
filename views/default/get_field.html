@@ -1,0 +1,11 @@
+{{
+		for x in txt:
+			if x=="\n":
+				response.write("<br/>", escape=False)
+			elif x=="1":
+				response.write("<div class='ship1'></div>", escape=False)
+			else:
+				response.write("<div class='water'></div>", escape=False)
+			pass
+		pass
+}}
