@@ -1,3 +1,12 @@
 #include "skynet.h"
 
-// Zachodni wiatr spienione goni fale
+SkyNet::SkyNet()
+{
+	/// TO DO
+}
+
+Coord SkyNet::shoot()
+{
+	/// TO DO
+	return *(new Coord(0,0));
+}

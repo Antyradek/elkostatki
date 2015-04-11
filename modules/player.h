@@ -1,5 +1,5 @@
-#ifndef FLEET_H_
-#define FLEET_H_
+#ifndef PLAYER_H_
+#define PLAYER_H_
 
 #include "ship.h"
 #include "board.h"
@@ -24,10 +24,10 @@ enum ShotStatus
 };
 
 /**
- * @class Fleet
- * Reprezentuje flotę - zbiór statków gracza
+ * @class Player
+ * Reprezentuje gracza
  */
-class Fleet
+class Player
 {
 protected:
 	/// Tablica statków
@@ -54,7 +54,7 @@ public:
 	/**
 	 * Konstruktor
 	 */
-	Fleet();
+	Player();
 	
 	/**
 	 * Sprawdza, czy są jeszcze niezatopione statki

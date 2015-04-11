@@ -56,6 +56,12 @@ public:
 	 * @returns true jeśli statek nie został zniszczony
 	 */	
 	bool isAfloat();
+	
+		/**
+	 * Sprawdza, czy statek jest ustawiony pionowo
+	 * @returns true jeśli statek jest ustawiony pionowo
+	 */	
+	bool isVertical();
 };
 
 #endif

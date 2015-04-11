@@ -1,17 +1,22 @@
 #ifndef GAME_H_
 #define GAME_H_
 
-#include "fleet.h"
+#include "player.h"
 #include "skynet.h"
 
 class Game
 {
 private:
-	Fleet player;
+	Player player;
 	
 	SkyNet skynet;
 
 public:
+	/**
+	 * Konstruktor
+	 */
+	Game();
+
 	/**
 	 * Strzela w pole o współrzednych (x,y)
 	 * @returns ShotStatus (patrz: fleet.h) rzutowany do char

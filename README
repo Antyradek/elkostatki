@@ -4,10 +4,9 @@
 
 Koncepcja w wersji alfa:
 	Ship - klasa reprezentująca pojedynczy statek
-	Fleet - klasa reprezentująca gracza
+	Player - klasa reprezentująca gracza
 	        trzyma jego statki, planszę i aktualnie znaną planszę wroga
-	        przydałoby się to przemianować na Player
-	SkyNet : Fleet - gracz z zaimplementowanym mózgiem
+	SkyNet : Player - gracz z zaimplementowanym mózgiem
 	Game - klasa reprezentująca grę (jej model); odpowiada za komunikację ze światem, zna reguły gry, odpowiada za to, co się dzieje z graczami i ich statkami
 	
 	Board - klasa reprezentująca planszę jako macierz pól
@@ -45,18 +44,21 @@ PROSZĘ SIĘ TEGO TRZYMAĆ
 ---------------
      TO DO
 ---------------
-	!! dopracować sposób komunikacji modelu z kontrolerem
-	!! dokończyć klasy SkyNet, Game
-	!! algorytm losowania
+	!!! main.cpp i połączenie tego z Pythonem
 	! makefile
 	- dopracować wstępnie zrobione klasy
+	- algorytm losowania
 	- ogarnąć śmietnik, utworzyć jakąś ładną strukturę katalogów
 
 ---------------
    changelog
 ---------------
+v0.3
+	- wstępny szkic klasy SkyNet
+	- zmiana klasy Fleet na Player
+	
 v0.2
-	- wtepny pomysł komunikacji modelu ze światem
+	- wstepny pomysł komunikacji modelu ze światem
 	- drobna zmiana koncepcji i poprawki w klasie Fleet
 	- utworzony bardzo wstępny plik nagłówkowy dla klasy Game i odpowiedni .cpp
 	- utworzone placeholdery plików .h i .cpp klasy SkyNet

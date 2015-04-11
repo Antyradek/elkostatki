@@ -24,6 +24,10 @@ bool Ship::isHit(const Coord position)
 
 bool Ship::isAfloat()
 {
-	/// TO DO
-	return true;
+	return this->afloat;
+}
+
+bool Ship::isVertical()
+{
+	return this->vertical;
 }

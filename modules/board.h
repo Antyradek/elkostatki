@@ -7,11 +7,12 @@
 
 /**
  * @enum pola planszy
- * @var FREE pole, na którym można ustawić statek
- * @var SHIP pole zajęte przez statek
- * @var HIT pole zajęte przez trafiony segment statku
- * @var WRECK pole zjęte przez zatopiony statek
- * @var PROHIBITED pole sasiadujące ze statkiem
+ * @var SQ_FREE niezajęte pole, na którym można postawić statek
+ * @var SQ_SHIP pole zajęte przez statek
+ * @var SQ_HIT pole zajęte przez trafiony segment statku
+ * @var SQ_WRECK pole zjęte przez zatopiony statek
+ * @var SQ_PROHIBITED pole sasiadujące ze statkiem
+ * @var SQ_UNKNOWN pole, ktorego typu gracz nie zna (tylko plansza przeciwnika)
  */
 enum SquareType
 {
@@ -19,7 +20,8 @@ enum SquareType
 	SQ_SHIP = 'S',
 	SQ_HIT = 'H',
 	SQ_WRECK = 'W',
-	SQ_PROHIBITED = 'P'
+	SQ_PROHIBITED = 'P',
+	SQ_UNKNOWN = 'U'
 };
 
 /**
