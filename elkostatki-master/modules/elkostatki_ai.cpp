@@ -31,7 +31,15 @@ string generate_field()
 	return out;
 }
 
+int shoot(string fields)
+{
+	//puki co strzela w losowe miejsce
+	srand(time(nullptr));
+	return rand() % (SIZE * SIZE);
+}
+
 BOOST_PYTHON_MODULE(elkostatki_ai)
 {
     boost::python::def("generate_field", generate_field);
+    boost::python::def("shoot", shoot);
 }

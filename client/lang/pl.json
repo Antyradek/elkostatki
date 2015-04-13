@@ -1,8 +1,0 @@
-{
-    "ABOUT" : "O aplikacji",
-
-   	"TIME" : "czas serwera",
-   	"SRV_VER" : "wersja serwera",
-   	"DB_VER" : "wersja bazy danych",
-   	"CLI_VER" : "wersja klienta"
-}
