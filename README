@@ -12,6 +12,6 @@ Skompiluj program w C++ za pomocą make.
 
 Wejdź na localhost:8000/elkostatki
 
-Jeśli są błędy, wpierw odświerz stronę kilka rady.
+Jeśli są błędy, wpierw odśwież stronę kilka razy.
 
 Pliki __init__.py są absolutnie bezużyteczne, należy je zostawić puste. Bo Python.
