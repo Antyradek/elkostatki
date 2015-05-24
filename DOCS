@@ -1,0 +1,23 @@
+Tutaj są dane na temat działania aplikacji.
+
+Gracz wchodzi na index, odpala to funkcję index w controllers/default.py.
+Wczytuje to stronę otoczki i uruchamia JS, który wczytuje AJAXem planszę gracza i przeciwnika w 
+zależności od jego ciasteczka.
+
+Kliknięcie na planszę ładuje ją na nowo z numerem trafionego pola. 
+W tym czasie komputer oddaje swój strzał.
+
+Plansza jest stringiem długości d².
+w	Woda
+s	Statek
+p	Pudło (trafiona woda)
+t	Trafiony statek
+
+Możemy patrzeć na duże statki jako na grupy małych stateczków. Za każdy mały stateczek (segment dużego)
+dostajemy 1 pkt.
+
+Wywołania modelu wykonują się gdy:
+Chcemy wygenerować nową planszę.
+Dajemy komputerowi planszę i chcemy, żeby strzelił.
+
+Gra kończy się, gdy ktoś ustrzeli wszystkie segmenty

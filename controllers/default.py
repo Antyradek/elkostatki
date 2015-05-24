@@ -1,4 +1,3 @@
-import subprocess
 ai = local_import("elkostatki_ai", reload = True);
 
 ## Główna otoczka do gry
@@ -18,7 +17,9 @@ def continue_game():
 
 ## Pobierz pole z grą
 def get_field():
+	#jeśli wymusimy nową planszę 
 	force_new_game = request.vars["force_new_game"];
+	#jeśli oddajemy strzał przy okazji
 	shoot_field = request.vars["shoot"];
 	game = dict()
 	if not session.player_field or not session.cpu_field or force_new_game == "true":

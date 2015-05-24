@@ -1,4 +1,4 @@
-//Załaduj grę i umieść w elemencie field
+///Załaduj grę i umieść w elemencie field
 function load_game(src)
 {
 	src = "elkostatki/default/" + src;
@@ -18,6 +18,7 @@ $(document).ready(function()
 	});
 });
 
+///Wykonaj strzał i załaduj na nowo grę
 function shoot(field)
 {
 	load_game("get_field?shoot=" + field);
