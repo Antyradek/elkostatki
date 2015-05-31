@@ -48,11 +48,11 @@ def get_field():
 				session.player_field[cpu_shoot] = "t"
 			#sprawdzamy, kto wygrał, to zwracanie stringa zamiast strony trzeba będzie jeszcze dopracować
 			if session.player_field.count("s") == 0 and session.cpu_field.find("s") == -1:
-				return "Remis!"
+				return "<h1 class='win'>Remis!</h1>"
 			elif session.player_field.count("s") == 0:
-				return "Komputer wygrał!"
+				return "<h1 class='win'>Komputer wygrał!</h1>"
 			elif session.cpu_field.count("s") == 0:
-				return "Gracz wygrał!"
+				return "<h1 class='win'>Gracz wygrał!</h1>"
 		game = continue_game()
 	return game
 

@@ -1,8 +1,66 @@
-#field div
+@font-face {
+   font-family: rexlia;
+   src: url("../fonts/rexlia.ttf");
+}
+
+@keyframes pulsate {
+    from {background-color: red;}
+    to {background-color: orange;}
+}
+
+@keyframes rotate {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
+
+body
+{
+	font-family: rexlia;
+	background-image: url("../img/background.jpg");
+	background-size: 100% 100%; 
+}
+
+#field
+{
+	height: 600px;
+	width: 1200px;
+	opacity: 0.8;
+	margin: auto;	
+}
+
+
+
+#cpuField,#playerField
+{
+	width: 500px;
+	height: 500px;
+	overflow: hidden;
+	border-radius: 20px;
+	float: left;
+	margin: 50px;
+	display: inline-block;	
+	
+}
+
+#cpuField
+{
+	transform-style: preserve-3d;
+	transform: perspective(1000px) rotateY(-30deg);
+}
+
+#playerField
+{
+	transform-style: preserve-3d;
+	transform: perspective(1000px) rotateY(30deg);
+}
+
+#cpuField div,#playerField div
 {
 	display: inline-block;
 	width:  50px;
 	height: 50px;
+	float: left;
+	border-radius: 50px;
 }
 
 .water
@@ -17,16 +75,73 @@
 
 .shoot_water
 {
-	background-color: blue;
+	background-color: none;
 }
 
 .shoot_ship
 {
 	background-color: red;
+	animation: pulsate 1s infinite alternate;
 }
 
 .unknown
 {
-	background-color: gray;
+	background-color: #104E8B;
 	cursor: pointer;
+	transition: background-color 0.5s;
+}
+
+.unknown:hover
+{
+	background-color: #B0B0B0;
+}
+
+#backgroundCopy
+{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	opacity: 0.5;
+}
+
+#backgroundCopy a
+{
+	text-decoration: none;
+	color: white;
+	opacity: 0.5;
+}
+
+#authors
+{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	opacity: 0.5;
+	color: white;
+}
+
+#new_game_button
+{
+	background-color: white;
+	opacity: 0.5;
+	cursor: pointer;
+	margin: auto;
+	width: 100px;
+	text-align: center;
+	border-radius: 20px;
+	transition: background-color 0.5s;
+	padding: 4px;
+	transform: perspective(1000px) rotateX(30deg);
+}
+
+#new_game_button:hover
+{
+	background-color: orange;
+}
+
+.win
+{
+	color: white;
+	text-shadow: 0px 0px 10px white;
+	text-align: center;
 }

@@ -1,10 +1,7 @@
 {{
+		response.write("<div id='playerField'>", escape=False)
 		in_row = 0
 		for x in player_field:
-			if in_row > 9:
-				response.write("<br/>", escape=False)
-				in_row = 0
-			pass
 			if x=="w":
 				response.write("<div class='water'></div>", escape=False)
 			elif x=="s":
@@ -16,19 +13,13 @@
 			else:
 				response.write("<div></div>", escape=False)
 			pass
-			in_row = in_row + 1
 			pass
 		pass
-		response.write("<hr/>", escape=False)
-		
+		response.write("</div>", escape=False)
+		response.write("<div id='cpuField'>", escape=False)
 		#graczowi pokazujemy tylko odkryte pozycje
-		in_row = 0
 		counter = 0
 		for x in cpu_field:
-			if in_row > 9:
-				response.write("<br/>", escape=False)
-				in_row = 0
-			pass
 			if x=="w" or x=="s":
 				response.write("<div class='unknown' onclick='shoot(", escape=False)
 				response.write(counter)
@@ -41,7 +32,7 @@
 				response.write("<div></div>", escape=False)
 			pass
 			counter = counter + 1
-			in_row = in_row + 1
 			pass
 		pass
+		response.write("</div>", escape=False)
 }}
