@@ -3,10 +3,15 @@
 using namespace std;
 using namespace boost::python;
 
+unsigned int seed=0;/*globalny modyfikator ziarna rozkladu.
+dzieki temu nie bedzie identycznych rozkladow pod rzad*/
+enum difficulties {LOW=1, MEDIUM=2, HIGH=3};
+enum difficulties difficulty=MEDIUM;
+
 ///Algorytm zsuwania, losujemy pole i kierunek i próbujemy wsadzić na to miejsce statek.
 ///Jeśli się nie uda, wybieramy następne pole po prawej i znowu próbujemy.
 string generate_field()
-{	
+{
 	bool permittedField[SIZE * SIZE]; //czy dozwolone do postawienia statku
 	bool shipBoard[SIZE * SIZE]; //czy są statki
 	for(int i = 0; i < SIZE*SIZE; i++)
@@ -15,7 +20,7 @@ string generate_field()
 		shipBoard[i] = false;
 	}
 	string out = "";
-	srand(time(nullptr));
+	srand(time(nullptr)+(++seed));
 	putShip(permittedField, shipBoard, 4);
 	putShip(permittedField, shipBoard, 3);
 	putShip(permittedField, shipBoard, 3);
@@ -135,9 +140,69 @@ void putShip(bool* board, bool* shipBoard, int size)
 
 int shoot(string fields)
 {
+    clog<<fields<<endl;
 	//puki co strzela w losowe miejsce
-	srand(time(nullptr));
-	return rand() % (SIZE * SIZE);
+	unsigned int tmp=0;
+	srand(time(nullptr)+(++seed));
+	/*rozwiazanie to jest metoda Monte Carlo. dzieki niej zachowujemy rozklad rownomierny*/
+	do
+	{
+        if(difficulty==LOW)
+        {
+            tmp=rand() % (SIZE * SIZE);
+        }
+        else if(difficulty==MEDIUM)
+        {
+            tmp=rand() % (SIZE * SIZE);
+            for(int i=0;i<SIZE*SIZE;i++)//pola poziome
+            {
+                if(fields.at(i)=='t')
+                {
+                clog<<"t";
+                    if(i-1>=0 && i%SIZE!=0)//lewo
+                    {
+                        if(fields.at(i-1)!='t' && fields.at(i-1)!='p')
+                        {
+                            clog<<"l";
+                            tmp=i-1;
+                            break;
+                        }
+                    }
+                    if(i+1<SIZE*SIZE && i%SIZE!=(SIZE-1))//prawo
+                    {
+                        if(fields.at(i+1)!='t' && fields.at(i+1)!='p')
+                        {
+                            clog<<"p";
+                            tmp=i+1;
+                            break;
+                        }
+                    }
+                    if(i-SIZE>=0)//gora
+                    {
+                        if(fields.at(i-SIZE)!='t' && fields.at(i-SIZE)!='p')
+                        {
+                            clog<<"g";
+                            tmp=i-SIZE;
+                            break;
+                        }
+                    }
+                    if(i+SIZE<SIZE*SIZE)//dol
+                    {
+                        if(fields.at(i+SIZE)!='t' && fields.at(i+SIZE)!='p')
+                        {
+                            clog<<"d";
+                            tmp=i+SIZE;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        clog<<tmp<<endl;
+    }
+    while(fields.at(tmp)=='t' || fields.at(tmp)=='p');/*powszechnie przyjetym jest, ze nie strzela sie
+                                                        dwa razy w to samo pole*/
+	return tmp;
 }
 
 BOOST_PYTHON_MODULE(elkostatki_ai)
