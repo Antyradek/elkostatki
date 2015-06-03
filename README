@@ -3,15 +3,21 @@
 Aby uruchomić serwer, wpisz
 $ python2.7 web2py.py
 i podaj jakieś hasło.
+##to oznacza, ze oczywiscie trzeba miec zainstalowanego takiego pythona
 
 Teraz możesz wejść na localhost, na porcie 8000 (domyślnie).
 
 W katalogu applications stwórz nowy katalog, nazwij go elkostatki. Wszystko z githuba włóż tam.
 
 Skompiluj program w C++ za pomocą make.
+##zeby sie skompilowalo trzeba miec zainstalowanego boost pythona
 
 Wejdź na localhost:8000/elkostatki
 
 Jeśli są błędy, wpierw odśwież stronę kilka razy.
 
 Pliki __init__.py są absolutnie bezużyteczne, należy je zostawić puste. Bo Python.
+
+
+##############################################################
+
