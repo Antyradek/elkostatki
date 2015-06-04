@@ -9,3 +9,4 @@
 bool isPermitted(bool* board, int x, int y);
 void setBoard(bool* board, int x, int y, bool val);
 void putShip(bool* board, bool* shipBoard, int size);
+int better_shot(std::string fields);

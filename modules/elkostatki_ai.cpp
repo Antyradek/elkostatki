@@ -154,7 +154,7 @@ int shoot(string fields)
         else if(difficulty==MEDIUM)
         {
             tmp=rand() % (SIZE * SIZE);
-            for(int i=0;i<SIZE*SIZE;i++)//pola poziome
+            for(int i=0;i<SIZE*SIZE;i++)
             {
                 if(fields.at(i)=='t')
                 {
@@ -196,6 +196,14 @@ int shoot(string fields)
                         }
                     }
                 }
+            }
+        }
+        else if(difficulty==HIGH)
+        {
+            tmp=better_shot(fields);
+            if(tmp==-1)
+            {
+                tmp=rand() % (SIZE * SIZE);
             }
         }
         clog<<tmp<<endl;
