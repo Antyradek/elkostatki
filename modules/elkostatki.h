@@ -1,3 +1,7 @@
+/** \file elkostatki.h
+ * plik nagłówkowy
+ */
+
 #include <iostream>
 #include <string>
 #include <cstdlib> //Random

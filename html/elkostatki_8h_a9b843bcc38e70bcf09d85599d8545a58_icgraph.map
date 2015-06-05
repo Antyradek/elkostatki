@@ -1,0 +1,4 @@
+<map id="putShip" name="putShip">
+<area shape="rect" id="node2" href="$elkostatki__ai_8cpp.html#a1cd2ed75ed1ec259ceadaf56ea5a1deb" title="Algorytm zsuwania, losujemy pole i kierunek i próbujemy wsadzić na to miejsce statek. Jeśli się nie uda, wybieramy następne pole po prawej i znowu próbujemy. " alt="" coords="120,5,223,32"/>
+<area shape="rect" id="node3" href="$elkostatki__ai_8cpp.html#a690a3a703384c0cbea06a16fcd3d676f" title="wystawienie funkcji dla pythona " alt="" coords="271,5,460,32"/>
+</map>

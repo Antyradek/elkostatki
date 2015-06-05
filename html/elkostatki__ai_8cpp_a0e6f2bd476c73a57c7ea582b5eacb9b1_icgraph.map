@@ -1,0 +1,5 @@
+<map id="isPermitted" name="isPermitted">
+<area shape="rect" id="node2" href="$elkostatki__ai_8cpp.html#a9b843bcc38e70bcf09d85599d8545a58" title="Wsadź statek o określonej wielkości losowo na planszę " alt="" coords="141,5,208,32"/>
+<area shape="rect" id="node3" href="$elkostatki__ai_8cpp.html#a1cd2ed75ed1ec259ceadaf56ea5a1deb" title="Algorytm zsuwania, losujemy pole i kierunek i próbujemy wsadzić na to miejsce statek. Jeśli się nie uda, wybieramy następne pole po prawej i znowu próbujemy. " alt="" coords="256,5,359,32"/>
+<area shape="rect" id="node4" href="$elkostatki__ai_8cpp.html#a690a3a703384c0cbea06a16fcd3d676f" title="wystawienie funkcji dla pythona " alt="" coords="407,5,596,32"/>
+</map>
