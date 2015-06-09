@@ -1,6 +1,6 @@
 {{
+		#plansza gracza
 		response.write("<div id='playerField'>", escape=False)
-		in_row = 0
 		for x in player_field:
 			if x=="w":
 				response.write("<div class='water'></div>", escape=False)
@@ -16,6 +16,8 @@
 			pass
 		pass
 		response.write("</div>", escape=False)
+		
+		#plansza komputera
 		response.write("<div id='cpuField'>", escape=False)
 		#graczowi pokazujemy tylko odkryte pozycje
 		counter = 0
